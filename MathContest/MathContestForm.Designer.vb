@@ -26,6 +26,11 @@ Partial Class MathContestForm
         Me.CurrentMathProblemGroupBox = New System.Windows.Forms.GroupBox()
         Me.MathProblemTypeGroupbox = New System.Windows.Forms.GroupBox()
         Me.ControlsGroupbox = New System.Windows.Forms.GroupBox()
+        Me.SubmitButton = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.SummaryButton = New System.Windows.Forms.Button()
+        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ControlsGroupbox.SuspendLayout()
         Me.SuspendLayout()
         '
         'StudentInformationGroupBox
@@ -57,12 +62,52 @@ Partial Class MathContestForm
         '
         'ControlsGroupbox
         '
+        Me.ControlsGroupbox.Controls.Add(Me.ExitButton)
+        Me.ControlsGroupbox.Controls.Add(Me.SummaryButton)
+        Me.ControlsGroupbox.Controls.Add(Me.ClearButton)
+        Me.ControlsGroupbox.Controls.Add(Me.SubmitButton)
         Me.ControlsGroupbox.Location = New System.Drawing.Point(601, 12)
         Me.ControlsGroupbox.Name = "ControlsGroupbox"
         Me.ControlsGroupbox.Size = New System.Drawing.Size(230, 452)
         Me.ControlsGroupbox.TabIndex = 1
         Me.ControlsGroupbox.TabStop = False
         Me.ControlsGroupbox.Text = "Controls"
+        '
+        'SubmitButton
+        '
+        Me.SubmitButton.Location = New System.Drawing.Point(20, 26)
+        Me.SubmitButton.Name = "SubmitButton"
+        Me.SubmitButton.Size = New System.Drawing.Size(192, 94)
+        Me.SubmitButton.TabIndex = 0
+        Me.SubmitButton.Text = "Submit"
+        Me.SubmitButton.UseVisualStyleBackColor = True
+        '
+        'ClearButton
+        '
+        Me.ClearButton.Location = New System.Drawing.Point(20, 126)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(192, 94)
+        Me.ClearButton.TabIndex = 1
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = True
+        '
+        'SummaryButton
+        '
+        Me.SummaryButton.Location = New System.Drawing.Point(20, 226)
+        Me.SummaryButton.Name = "SummaryButton"
+        Me.SummaryButton.Size = New System.Drawing.Size(192, 94)
+        Me.SummaryButton.TabIndex = 2
+        Me.SummaryButton.Text = "Summary"
+        Me.SummaryButton.UseVisualStyleBackColor = True
+        '
+        'ExitButton
+        '
+        Me.ExitButton.Location = New System.Drawing.Point(20, 326)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(192, 94)
+        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.UseVisualStyleBackColor = True
         '
         'MathContestForm
         '
@@ -75,6 +120,7 @@ Partial Class MathContestForm
         Me.Controls.Add(Me.StudentInformationGroupBox)
         Me.Name = "MathContestForm"
         Me.Text = "MathContestForm"
+        Me.ControlsGroupbox.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -83,4 +129,8 @@ Partial Class MathContestForm
     Friend WithEvents CurrentMathProblemGroupBox As GroupBox
     Friend WithEvents MathProblemTypeGroupbox As GroupBox
     Friend WithEvents ControlsGroupbox As GroupBox
+    Friend WithEvents ExitButton As Button
+    Friend WithEvents SummaryButton As Button
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents SubmitButton As Button
 End Class
