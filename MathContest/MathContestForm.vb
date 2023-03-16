@@ -201,6 +201,7 @@ Public Class MathContestForm
         totalAnswered = 0
     End Sub
 
+    'Displays the total amount correct vs answered, but the user is allowed to clear said totals
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles SummaryButton.Click
 
         'Displays the correct to total count
