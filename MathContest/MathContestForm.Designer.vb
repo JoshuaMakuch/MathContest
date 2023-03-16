@@ -48,6 +48,7 @@ Partial Class MathContestForm
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SubmitButton = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DisclaimerLabel = New System.Windows.Forms.Label()
         Me.StudentInformationGroupBox.SuspendLayout()
         Me.CurrentMathProblemGroupBox.SuspendLayout()
         Me.MathProblemTypeGroupbox.SuspendLayout()
@@ -133,7 +134,7 @@ Partial Class MathContestForm
         Me.CurrentMathProblemGroupBox.Location = New System.Drawing.Point(12, 138)
         Me.CurrentMathProblemGroupBox.Name = "CurrentMathProblemGroupBox"
         Me.CurrentMathProblemGroupBox.Size = New System.Drawing.Size(347, 303)
-        Me.CurrentMathProblemGroupBox.TabIndex = 1
+        Me.CurrentMathProblemGroupBox.TabIndex = 3
         Me.CurrentMathProblemGroupBox.TabStop = False
         Me.CurrentMathProblemGroupBox.Text = "Current Math Problem"
         '
@@ -145,13 +146,14 @@ Partial Class MathContestForm
         Me.StudentAnswerLabel.Size = New System.Drawing.Size(112, 20)
         Me.StudentAnswerLabel.TabIndex = 5
         Me.StudentAnswerLabel.Text = "Student Answer"
+        Me.ToolTip1.SetToolTip(Me.StudentAnswerLabel, "Your answer (view disclaimer)")
         '
         'StudentAnswerTextBox
         '
         Me.StudentAnswerTextBox.Location = New System.Drawing.Point(18, 234)
         Me.StudentAnswerTextBox.Name = "StudentAnswerTextBox"
         Me.StudentAnswerTextBox.Size = New System.Drawing.Size(237, 27)
-        Me.StudentAnswerTextBox.TabIndex = 4
+        Me.StudentAnswerTextBox.TabIndex = 0
         '
         'SecondNumberLabel
         '
@@ -161,6 +163,7 @@ Partial Class MathContestForm
         Me.SecondNumberLabel.Size = New System.Drawing.Size(116, 20)
         Me.SecondNumberLabel.TabIndex = 3
         Me.SecondNumberLabel.Text = "Second Number"
+        Me.ToolTip1.SetToolTip(Me.SecondNumberLabel, "Second Number")
         '
         'SecondNumberTextBox
         '
@@ -177,13 +180,14 @@ Partial Class MathContestForm
         Me.FirstNumberLabel.Size = New System.Drawing.Size(94, 20)
         Me.FirstNumberLabel.TabIndex = 1
         Me.FirstNumberLabel.Text = "First Number"
+        Me.ToolTip1.SetToolTip(Me.FirstNumberLabel, "First Number")
         '
         'FirstNumberTextBox
         '
         Me.FirstNumberTextBox.Location = New System.Drawing.Point(18, 67)
         Me.FirstNumberTextBox.Name = "FirstNumberTextBox"
         Me.FirstNumberTextBox.Size = New System.Drawing.Size(237, 27)
-        Me.FirstNumberTextBox.TabIndex = 0
+        Me.FirstNumberTextBox.TabIndex = 1
         '
         'MathProblemTypeGroupbox
         '
@@ -251,7 +255,7 @@ Partial Class MathContestForm
         Me.ControlsGroupbox.Location = New System.Drawing.Point(601, 12)
         Me.ControlsGroupbox.Name = "ControlsGroupbox"
         Me.ControlsGroupbox.Size = New System.Drawing.Size(230, 429)
-        Me.ControlsGroupbox.TabIndex = 1
+        Me.ControlsGroupbox.TabIndex = 4
         Me.ControlsGroupbox.TabStop = False
         Me.ControlsGroupbox.Text = "Controls"
         '
@@ -282,6 +286,7 @@ Partial Class MathContestForm
         Me.ClearButton.Size = New System.Drawing.Size(192, 94)
         Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "Clear"
+        Me.ToolTip1.SetToolTip(Me.ClearButton, "Clears all possible fields")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'SubmitButton
@@ -294,13 +299,24 @@ Partial Class MathContestForm
         Me.ToolTip1.SetToolTip(Me.SubmitButton, "Submit's the current answer written")
         Me.SubmitButton.UseVisualStyleBackColor = True
         '
+        'DisclaimerLabel
+        '
+        Me.DisclaimerLabel.AutoSize = True
+        Me.DisclaimerLabel.Location = New System.Drawing.Point(12, 444)
+        Me.DisclaimerLabel.Name = "DisclaimerLabel"
+        Me.DisclaimerLabel.Size = New System.Drawing.Size(659, 20)
+        Me.DisclaimerLabel.TabIndex = 2
+        Me.DisclaimerLabel.Text = "!DISCLAIMER! Round up to whole numbers on 0.501 and above and round down on 0.5 a" &
+    "nd below."
+        '
         'MathContestForm
         '
         Me.AcceptButton = Me.SubmitButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ClearButton
-        Me.ClientSize = New System.Drawing.Size(843, 453)
+        Me.ClientSize = New System.Drawing.Size(843, 472)
+        Me.Controls.Add(Me.DisclaimerLabel)
         Me.Controls.Add(Me.CurrentMathProblemGroupBox)
         Me.Controls.Add(Me.MathProblemTypeGroupbox)
         Me.Controls.Add(Me.ControlsGroupbox)
@@ -315,6 +331,7 @@ Partial Class MathContestForm
         Me.MathProblemTypeGroupbox.PerformLayout()
         Me.ControlsGroupbox.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -343,4 +360,5 @@ Partial Class MathContestForm
     Friend WithEvents FirstNumberTextBox As TextBox
     Friend WithEvents AgeTextBox As TextBox
     Friend WithEvents GradeTextBox As TextBox
+    Friend WithEvents DisclaimerLabel As Label
 End Class
